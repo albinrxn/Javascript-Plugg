@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      'use strict';
+
+      function skapaObjekt(){
+        var myObjekt={}; //detta är två sätt att deklarera ett objekt (första)
+        var myObjekt2=new Object();//(andra)
+
+        myObjekt.namn = "Albin"; //sätter egenskapen på objekt
+        myObjekt.alder; //sätter tom egenskap
+        myObjekt.setAlder = function(alderIn) {
+          myObjekt.alder=alderIn; //initierar värde för egenskapen alder
+        };
+        myObjekt.setAlder(20); //anropar objektets funktion
+
+        document.write(myObjekt.namn + "<br>");
+        document.write(myObjekt.alder + "<br>");
+      }
+      ////////////////////////////////////////////////////////////////////////////////////////////////////
+      //Detta är ett annat sätt att skapa ett objekt samt initiera attribut och metoder direkt vid deklarationen
+      function skapaObjekt2(){
+        let person = { //här skapas objektet med egenskaper och funktion på samma gång.
+          namn: "Olle",
+          yrke: "",
+          setYrke: function(){ //funktionen tilldelar ett värde för yrke
+            person.yrke = "Student";
+          }
+        }
+        person.setYrke(); //anropar objektets funktion
+
+        document.write(person.namn + " " + person.yrke + "<br>");
+
+      }
+
+      skapaObjekt();
+      skapaObjekt2();
+
+    </script>
+  </body>
+</html>

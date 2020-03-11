@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      'use strict';
+      var tal=4; //global variabel
+
+      function berakna(){ //funktionen skriver ut vilken datatyp variabeln innehåller (borde inte heta berakana xD)
+        var sanning = true;
+        document.write(typeof tal + " " + typeof sanning + "<br>");
+
+        if(tal==="42") { // === tar hänsyn på datatyp
+          document.write("Detta borde inte fungera");
+        }
+        else {
+          document.write("Detta borde fungera <br>");
+        }
+      }
+
+      function skriv() {
+        console.log("HEJ"); //skriver till console
+        document.writeln("Hej <br>");
+        document.write("Hej då <br>");
+
+        if(isNaN(tal)){ //kontrollerar ifall den globala variabeln tal inte är ett nummer (Not a Number)
+          document.write("Inte ett nummer<br>");
+        }
+        else {
+          document.write("Det är ett nummer <br>");
+        }
+      }
+
+      function test() {
+        //detta för att se om en tom funktion returnerar undefined utan "return-värde"
+      }
+
+      function konvertera(){
+        let tal2="30";
+        var tal3;
+        tal3=parseInt(tal2); //här konverteras en sträng "30" till en heltal 30
+        document.write("<br>"+typeof tal3);
+        document.write("<br>"+tal3);
+      }
+
+      function error(){
+        var istrue = true;
+        if(istrue)
+        {
+          let x = 2;
+        }
+        document.write("<br>"+x); //detta ska inte visas på skärmen, (ERROR)
+        //eftersom let är en variabel som bara kan nås innanför måsvingarna
+      }
+
+        berakna();
+        skriv();
+        document.write(test());
+        konvertera();
+        error();
+
+    </script>
+  </body>
+</html>

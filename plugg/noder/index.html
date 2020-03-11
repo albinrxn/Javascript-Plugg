@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      .lead {
+        font-weight: bold;
+      }
+      .picture {
+        float: right;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RUBRIK</h1>
+    <img class="picture" id="valp" src="puppy.jpg" alt="Bild på en söt valp" width="300" height="auto" >
+    <p class="lead">Detta är en exempeltext för att öva på noder. Jag skriver detta för att
+      fylla ut texten så att den blir så lång som möjligt. skfjkj fdlgks jflg
+      dsfkgjsdlkjg slkdfjgljg sdlkfjg ldjgldlfg jsödfkjglsdkjfglfsfjgslsdkfj.
+    </p>
+    <p>I denna text kommer
+      jag även lägga till en bild för att öva på att ändra "src" och "alt"
+      attributen. lkfsalfdjgkdsjlgjs jgksdjlkgsdf gfd.g dsf .gs.d gs .sd.gf str
+      dfgksögkdslgk sgdfsgdf fgsdf.
+    </p>
+    <script type="text/javascript">
+      'use script';
+
+      var element = document.querySelector("#valp"); //fångar noder med id:t "valp"
+      console.log(document.querySelectorAll(".picture").length); //ska ange hur många noder som har klassnamnet "picture"
+      //detta kan man läsa i console
+
+      if(element.getAttribute('src') === 'puppy.jpg') { //kontrollerar ifall attributet som finns i 'src' är samma som 'puppy'
+        element.setAttribute('src', 'kitten.jpg'); //byter ut attributet i 'src' till efterföljande
+        element.setAttribute('alt', 'Bild på en gullig kattunge'); //samma här fast för 'alt'
+        //element.removeAttribute('width'); //får hela bilden att bli stor
+      }
+
+      element = document.querySelector("p.lead");
+
+      element.innerHTML = '<i>Ny Text</i> ' + element.innerHTML;//lägger till texten innan hela paragrafen
+      //element.innerHTML = '<i>Ny Text</i> ' + element.innerHTML;
+      //Ifall raden ovan används så kommer man inte kunna använda elementen <i>
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script type="text/javascript">
+      'use strict'
+
+      function array(){
+        var arr1=[1, "Albin", true];
+        let arr2=[];
+
+        arr2.push("A");//lägg till
+        arr2.push("B");
+        arr2.push("C");
+        arr2.unshift("Detta är första platsen");//lägg till på första plats
+        arr2.unshift("Denna ligger just nu först men kommer tas bort"); //lägger till denna på första plats (kommer tas bort nedan)
+        arr2.shift();//tar bort och returnerar variabeln som ligger först
+        arr2.pop(); //tar bort och returnerar variabeln som ligger sist
+        document.write(arr1 + "<br>");
+        document.write(arr2 + "<br>");
+      }
+
+      function sorteraVekt(){ //funktion som sorterar en sträng vektor och en heltals vektor
+        var vekt=["Olle", "Filip", "Albin", "Lisa" , "Magnus"];
+
+        vekt.sort();
+        document.write("Sorterad sträng vektor: " + vekt + "<br>");
+
+        var vekt2=[4,1,5,7,2];
+        vekt2.sort(function(a,b){
+          return a-b;
+        });
+        document.write("Sorterad int vektor: " + vekt2 + "<br>");
+      }
+
+      array();
+      sorteraVekt();
+    </script>
+  </body>
+</html>
